@@ -4,369 +4,707 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TC Course Portfolio — Learning & Group Contribution</title>
-  <meta name="description" content="Learning portfolio and group contribution summary for the TC course." />
+  <meta name="description" content="Learning portfolio and group contribution for the TC course." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<script>
+  function openDialog(id) {
+    const dialog = document.getElementById(id);
+    if (dialog) dialog.showModal();
+  }
 
+  document.addEventListener('click', e => {
+    if (e.target.tagName === 'DIALOG') e.target.close();
+  });
+</script>
+
+
+<body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-text">
+        <div class="brand-mark"></div>
+        <div>
           <div class="brand-title">TC Course Portfolio</div>
           <div class="brand-subtitle">Learning & Group Contribution</div>
         </div>
       </div>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#overview">Overview</a>
+      <nav class="nav">
         <a href="#roles">Roles</a>
-        <a href="#contributions">Contributions</a>
+        <a href="#contributions">Contribution</a>
         <a href="#learning">Learning</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#reflection">Reflection</a>
+        <a href="#summary">Summary</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Learning & Group Contribution</h1>
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <h1>Learning &amp; Group Contribution</h1>
+
           <p class="lead">
-            This site documents my development, working methods, and group impact during the TC course project.
-            It is structured to support portfolio evaluation discussions.
+            This portfolio documents my role, contributions, and learning outcomes during the TC course project.
+            The focus is on concrete responsibilities, delivered systems, collaboration within the group and reflection on personal development.
           </p>
-
-          <div class="hero-meta">
-            <div class="pill">
-              <span class="pill-label">Course</span>
-              <span class="pill-value">TC</span>
-            </div>
-            <div class="pill">
-              <span class="pill-label">Focus</span>
-              <span class="pill-value">Systems + UI + Team Process</span>
-            </div>
-            <div class="pill">
-              <span class="pill-label">Roles</span>
-              <span class="pill-value">Implementation Lead, Scrum Master</span>
-            </div>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn" href="#contributions">Jump to contributions</a>
-            <a class="btn btn-ghost" href="#learning">Jump to learning</a>
-          </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Quick summary">
-          <h2 class="panel-title">Quick Summary</h2>
-          <ul class="checklist">
-            <li>Weekly Monday meetings: progress, blockers, next steps</li>
-            <li>Gameplay design + implementation planning</li>
-            <li>Systems & in-game UI programming (inputs, camera, inventory, equipment, resources, UI navigation)</li>
-            <li>Testing, balancing, and feedback survey for playtests</li>
-            <li>Cross-team support and integration assistance</li>
-          </ul>
+        <aside class="profile-card" aria-label="Student information">
+          <img
+            src="img/profile.jpg"
+            alt="Profile photo"
+            class="profile-image"
+          />
 
-          <div class="callout">
-            <div class="callout-title">Tip for meeting</div>
-            <p class="callout-text">
-              Bring a few workflow artifacts: screenshots of Kanban, UI states, and system diagrams / documents.
-            </p>
+          <div class="profile-info">
+            <h3>Artem Shyshkov</h3>
+
+            <ul class="profile-list">
+              <li><strong>Student number:</strong> AF0885</li>
+              <li><strong>Field:</strong> Business Information Technology (BIT)</li>
+              <li><strong>Project:</strong> Valiant Attempt</li>
+              <li><strong>Roles:</strong> Implementation Lead, Scrum Master, Systems &amp; UI Programmer</li>
+            </ul>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="overview" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Overview</h2>
-          <p>
-            This portfolio combines the <strong>Learning Portfolio</strong> and <strong>Group Contribution</strong> for the TC course.
-            It emphasizes workflow evidence, self-assessment, and clear mapping between responsibilities and outcomes.
-          </p>
-        </div>
 
-        <div class="grid-2">
-          <article class="card">
-            <h3>What this site includes</h3>
-            <ul class="bullets">
-              <li>My roles and responsibilities</li>
-              <li>Concrete contributions (what I delivered and supported)</li>
-              <li>Workflow artifacts to show process, not only final results</li>
-              <li>Learning goals, outcomes, and self-assessment</li>
-              <li>Reflection and next steps</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>How to use this in evaluation</h3>
-            <ul class="bullets">
-              <li>Use the navigation to jump to key areas</li>
-              <li>During the meeting, present highlights only</li>
-              <li>Keep supporting evidence (screenshots, docs, links) available</li>
-              <li>Discuss trade-offs, iterations, and learning insights</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    <!-- ROLES -->
     <section id="roles" class="section section-muted">
       <div class="container">
-        <div class="section-head">
-          <h2>Roles</h2>
-          <p>Roles held during the project and what they meant in practice.</p>
-        </div>
+        <h2>Roles</h2>
 
         <div class="grid-3">
-          <article class="card">
+          <div class="card">
             <h3>Implementation Lead</h3>
-            <p class="muted">
-              Coordinated implementation priorities, ensured features moved from plan to working game systems, and supported integration.
+            <p>
+              Responsible for coordinating implementation priorities and ensuring gameplay features progressed from planning to working systems.
             </p>
-          </article>
 
-          <article class="card">
+            <div class="placeholder">
+              <strong>Documents:</strong>
+              <ul>
+                <li>
+                  <a href="https://docs.google.com/document/d/1IXEtlgN_mhmGIHg8b-XqbHJ-fapPR78SK7Sxx0Sze-k/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Gameplay design document
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.google.com/document/d/1e-vWcuKpRhYToKuQjD-rrrFyQQ4N-1bC7IFwKtwOeAU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Level implementation document
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
             <h3>Scrum Master</h3>
-            <p class="muted">
-              Facilitated weekly meetings, helped track progress and blockers, and kept the team aligned through lightweight documentation and boards.
+            <p>
+              Facilitated weekly meetings, tracked progress and blockers, and supported team alignment through lightweight process structures.
             </p>
-          </article>
 
-          <article class="card">
-            <h3>Systems & UI Programmer</h3>
-            <p class="muted">
-              Built core gameplay-supporting systems and the in-game UI, including robust navigation for both gamepad and keyboard/mouse.
+            <div class="placeholder">
+              <strong>Artifacts:</strong>
+              <ul>
+                <li>
+                  <a href="https://docs.google.com/document/d/1nzd427mcq5TsWRNVxaHaQ1vp0VPi6Ak_xGFuSi-2k4k/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Meeting notes
+                  </a>
+                </li>
+                <li>
+                  <a href="#proof-kanban">Kanban board screenshot</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Systems &amp; UI Programmer</h3>
+            <p>
+              Designed and implemented core gameplay-supporting systems and all in-game UI, including navigation for both gamepad and keyboard/mouse.
             </p>
-          </article>
+
+            <div class="placeholder">
+              <strong>Evidence:</strong>
+              <ul>
+                <li><a href="#proof-ui-states">UI states</a></li>
+                <li><a href="#deliverables">System implementataion examples</a></li>
+                <li>
+                  <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/final-steam-build-branch/Assets/00_Project%20Files/GameWorld/Scenes/Artem" target="_blank" rel="noopener noreferrer">
+                    Github repository folder
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- CONTRIBUTION -->
     <section id="contributions" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Group Contribution</h2>
-          <p>Concrete contributions to group performance, cohesion, and delivery.</p>
-        </div>
+        <h2>Group Contribution</h2>
 
         <div class="grid-2">
-          <article class="card">
-            <h3>Project & Team Process</h3>
-            <ul class="bullets">
-              <li>Weekly Monday meetings: review completed work, missing work, and plans for next week</li>
-              <li>Tracking via GitHub Kanban board, text documents, and Discord logs</li>
-              <li>Gameplay design discussions: mechanics, level flow, and what happens moment-to-moment</li>
-              <li>Testing planning and feedback collection via a survey for playtest sessions</li>
+          <div class="card">
+            <h3>Project &amp; Team Work</h3>
+            <ul>
+              <li>Weekly Monday meetings (progress, blockers, next steps)</li>
+              <li>Task tracking via GitHub Kanban board</li>
+              <li>Gameplay design discussions and implementation planning</li>
+              <li>Testing coordination and feedback collection via survey</li>
             </ul>
 
-            <div class="evidence">
-              <div class="evidence-title">Suggested evidence to add</div>
-              <ul class="evidence-list">
-                <li>Screenshot: Kanban board (one early, one late)</li>
-                <li>Link/clip: Discord sprint notes excerpt</li>
-                <li>PDF/image: gameplay design doc snapshot</li>
+            <div class="placeholder">
+              <strong>Proof:</strong>
+              <ul>
+                <li><a href="#proof-kanban">Kanban board screenshot</a></li>
+                <li>
+                  <a href="https://forms.gle/mJHpcxFCdmnyLqzC7" target="_blank" rel="noopener noreferrer">
+                    Playtest survey document
+                  </a>
+                </li>
+                <li>
+                    Gameplay design excerpts
+                </li>
               </ul>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
-            <h3>Support & Collaboration</h3>
-            <ul class="bullets">
-              <li>Helped team members with camera system and level design implementation</li>
-              <li>Supported art integration and UI alignment with visuals</li>
-              <li>Assisted with UI/system integration and merging across contributors</li>
-              <li>Maintained a “help wherever needed” approach to reduce bottlenecks</li>
+          <div class="card">
+            <h3>Support to Team Members</h3>
+            <ul>
+              <li>Assisted with camera system and level design</li>
+              <li>Supported UI and art integration</li>
+              <li>Helped merge systems developed by different contributors</li>
+              <li>Reviewed and debugged issues reported by teammates</li>
+              <li>Helped keep scope realistic</li>
+              <li>Provided build/playtest support</li>
             </ul>
-
-            <div class="evidence">
-              <div class="evidence-title">Suggested evidence to add</div>
-              <ul class="evidence-list">
-                <li>Before/after: merged UI + gameplay system working together</li>
-                <li>PR links: integration commits</li>
-                <li>Short note: issue → resolution summary</li>
-              </ul>
-            </div>
-          </article>
+          </div>
         </div>
 
-        <article class="card card-wide">
+        <div class="card card-wide">
           <h3>Technical Deliverables</h3>
-          <div class="grid-2">
-            <ul class="bullets">
-              <li>Player input handling</li>
-              <li>Camera system + fade-out transitions</li>
-              <li>Inventory system</li>
-              <li>Equipment system</li>
-            </ul>
-            <ul class="bullets">
-              <li>Resource system</li>
-              <li>In-game UI (visual + technical)</li>
-              <li>UI navigation for gamepad + keyboard/mouse</li>
-              <li>Testing and balancing across skills, enemies, items, equipment</li>
-            </ul>
+
+          <!-- Per-item proof dropdowns -->
+          <ul class="deliverables" id="deliverables">
+            <li>
+              <details class="mini-details">
+                <summary>Player input system (old)</summary>
+                <div class="mini-proof">
+                  <div class="proof-links">
+                    <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/pre-production/Assets/00_Project%20Files/Code/Scripts/Player/InputSystem" target="_blank" rel="noopener noreferrer">View code on GitHub</a>
+                  </div>
+                  <div class="proof-grid">
+
+                    
+                    <figure>
+                      <img
+                        src="img/gamepad_inputs.png"
+                        alt="In-game gamepad inputs plan"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-input-plan')"
+                      >
+                      <figcaption>In-game gamepad inputs plan</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-input-plan" class="image-dialog">
+                      <img src="img/gamepad_inputs.png" alt="In-game gamepad inputs plan">
+                    </dialog>
+
+
+                     <figure>
+                      <img
+                        src="img/ingame_inputs.png"
+                        alt="In-game gamepad inputs implementataion"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-input-implementation')"
+                      >
+                      <figcaption>In-game gamepad inputs implementation</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-input-implementation" class="image-dialog">
+                      <img src="img/ingame_inputs.png" alt="In-game gamepad inputs implementataion">
+                    </dialog>
+
+
+                    <figure>
+                      <img
+                        src="img/ui_inputs.png"
+                        alt="UI gamepad inputs implementation"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-input-ui')"
+                      >
+                      <figcaption>UI gamepad inputs implementation</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-input-ui" class="image-dialog">
+                      <img src="img/ui_inputs.png" alt="UI gamepad inputs implementation">
+                    </dialog>
+
+
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="mini-details">
+                <summary>Camera system with fade out feature</summary>
+                <div class="mini-proof">
+                  <div class="proof-links">
+                    <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/final-steam-build-branch/Assets/00_Project%20Files/Code/Scripts/Player/InputSystem/Fading" target="_blank" rel="noopener noreferrer">View code on GitHub</a>
+                  </div>
+                  <div class="proof-grid">
+                    
+
+                    <figure>
+                      <img
+                        src="img/fadeout.png"
+                        alt="Camera's fadeout objects feature"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-fadeout')"
+                      >
+                      <figcaption>Camera's fadeout objects feature</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-fadeout" class="image-dialog">
+                      <img src="img/fadeout.png" alt="Camera's fadeout objects feature">
+                    </dialog>
+
+
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="mini-details">
+                <summary>Inventory system</summary>
+                <div class="mini-proof">
+                  <div class="proof-links">
+                    <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/final-steam-build-branch/Assets/00_Project%20Files/GameWorld/Scenes/Artem/InventorySystem" target="_blank" rel="noopener noreferrer">View code on GitHub</a>
+                  </div>
+                  <div class="proof-grid">
+                    
+
+                    <figure>
+                      <img
+                        src="img/inventory1.png"
+                        alt="Inventory read type object"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-inventory1')"
+                      >
+                      <figcaption>Inventory read type object</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-inventory1" class="image-dialog">
+                      <img src="img/inventory1.png" alt="Inventory read type object">
+                    </dialog>
+
+
+                    <figure>
+                      <img
+                        src="img/inventory2.png"
+                        alt="Inventory consumption type object"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-inventory2')"
+                      >
+                      <figcaption>Inventory consumption type object</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-inventory2" class="image-dialog">
+                      <img src="img/inventory2.png" alt="Inventory consumption type object">
+                    </dialog>
+
+
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="mini-details">
+                <summary>Equipment system</summary>
+                <div class="mini-proof">
+                  <div class="proof-links">
+                    <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/final-steam-build-branch/Assets/00_Project%20Files/GameWorld/Scenes/Artem/EquipmentSystem" target="_blank" rel="noopener noreferrer">View code on GitHub</a>
+                  </div>
+                  <div class="proof-grid">
+                    
+
+                    <figure>
+                      <img
+                        src="img/equipment.png"
+                        alt="Equipment system"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-equipment')"
+                      >
+                      <figcaption>Equipment system</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-equipment" class="image-dialog">
+                      <img src="img/equipment.png" alt="Equipment system">
+                    </dialog>
+
+
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="mini-details">
+                <summary>Resource system</summary>
+                <div class="mini-proof">
+                  <div class="proof-links">
+                    <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/final-steam-build-branch/Assets/00_Project%20Files/Code/Scripts/GameLogic/GameplaySystems/ResourceSystem" target="_blank" rel="noopener noreferrer">View code on GitHub</a>
+                  </div>
+                  <div class="proof-grid">
+                    
+
+                    <figure>
+                      <img
+                        src="img/resources.png"
+                        alt="Resource system"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-resources')"
+                      >
+                      <figcaption>Resource system</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-resources" class="image-dialog">
+                      <img src="img/resources.png" alt="Resource system">
+                    </dialog>
+
+
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="mini-details">
+                <summary>Complete in-game UI</summary>
+                <div class="mini-proof">
+                  <p class="muted">Screenshots are collected here: <a href="#proof-ui-states">UI states</a></p>
+                  <div class="proof-links">
+                    <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/final-steam-build-branch/Assets/00_Project%20Files/GameWorld/Scenes/Artem/InGameMenuSystem" target="_blank" rel="noopener noreferrer">View UI code on GitHub (part)</a>
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="mini-details">
+                <summary>Gamepad and keyboard/mouse navigation</summary>
+                <div class="mini-proof">
+                  <p class="muted">Screenshots are collected here: <a href="#proof-ui-states">UI states</a></p>
+                  <div class="proof-links">
+                    <a href="https://github.com/R-Y-K/Ticorporate-Demo-Lab-Project/tree/final-steam-build-branch/Assets/00_Project%20Files/GameWorld/Scenes/Artem/InGameMenuSystem" target="_blank" rel="noopener noreferrer">View navigation code on GitHub</a>
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li>
+              <details class="mini-details">
+                <summary>Testing and balancing</summary>
+                <div class="mini-proof">
+                  <ul class="note-list">
+                    <li>
+                      <a href="https://forms.gle/c5Gifv5yQKAD7kT47" target="_blank" rel="noopener noreferrer">
+                        Playtest survey (link)
+                      </a>
+                    </li>
+                    <li>Balancing notes
+                      <div class="proof-grid">
+                      <figure>
+                      <img
+                        src="img/balance.png"
+                        alt="Balance"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-balance')"
+                      >
+                      </figure>
+
+                    <dialog id="dialog-balance" class="image-dialog">
+                      <img src="img/balance.png" alt="Balance">
+                    </dialog>
+                    </div>
+                    </li>
+
+                    <li>Bug list / feedback report
+                      <div class="proof-grid">
+                      <figure>
+                      <img
+                        src="img/bugs.png"
+                        alt="Bugs"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-bugs')"
+                      >
+                      </figure>
+
+                    <dialog id="dialog-bugs" class="image-dialog">
+                      <img src="img/bugs.png" alt="Bugs">
+                    </dialog>
+                    </div>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </li>
+          </ul>
+
+          <!-- Proof blocks (linked from Roles / Contribution) -->
+          <div id="proof-ui-states" class="proof-block">
+            <details class="proof-details">
+              <summary>UI states</summary>
+              <div class="proof-grid">
+
+
+                    <figure>
+                      <img
+                        src="img/ingame_menu.png"
+                        alt="In-game menu"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-ingame_menu')"
+                      >
+                      <figcaption>In-game menu</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-ingame_menu" class="image-dialog">
+                      <img src="img/ingame_menu.png" alt="In-game menu">
+                    </dialog>
+
+
+                    <figure>
+                      <img
+                        src="img/inventory_menu.png"
+                        alt="Inventory menu"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-inventory_menu')"
+                      >
+                      <figcaption>Inventory menu</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-inventory_menu" class="image-dialog">
+                      <img src="img/inventory_menu.png" alt="Inventory menu">
+                    </dialog>
+
+
+                    <figure>
+                      <img
+                        src="img/equipment_menu.png"
+                        alt="Equipment menu"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-equipment_menu')"
+                      >
+                      <figcaption>Equipment menu</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-equipment_menu" class="image-dialog">
+                      <img src="img/equipment_menu.png" alt="Equipment menu">
+                    </dialog>
+
+
+                    <figure>
+                      <img
+                        src="img/skills_menu.png"
+                        alt="Skills menu"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-skills_menu')"
+                      >
+                      <figcaption>Skills menu</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-skills_menu" class="image-dialog">
+                      <img src="img/skills_menu.png" alt="Skills menu">
+                    </dialog>
+
+
+                    <figure>
+                      <img
+                        src="img/knm_ui.png"
+                        alt="Keyboard and mouse navigation"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-knm_ui')"
+                      >
+                      <figcaption>Keyboard and mouse navigation</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-knm_ui" class="image-dialog">
+                      <img src="img/knm_ui.png" alt="Keyboard and mouse navigation">
+                    </dialog>
+
+
+                     <figure>
+                      <img
+                        src="img/gamepad_ui.png"
+                        alt="Gamepad navigation"
+                        loading="lazy"
+                        class="zoomable"
+                        onclick="openDialog('dialog-gamepad_ui')"
+                      >
+                      <figcaption>gamepad_ui</figcaption>
+                    </figure>
+
+                    <dialog id="dialog-gamepad_ui" class="image-dialog">
+                      <img src="img/gamepad_ui.png" alt="gamepad_ui">
+                    </dialog>
+
+                
+              </div>
+            </details>
           </div>
 
-          <div class="note">
-            <strong>How to present:</strong> Pick 1–2 systems and show their workflow: design intent → implementation → test results → iteration.
+          
+
+          <div id="proof-kanban" class="proof-block">
+            <details class="proof-details">
+              <summary>Kanban board</summary>
+              <div class="proof-grid">
+                <figure>
+                  <img src="img/kanban.png" alt="Kanban board screenshot" loading="lazy">
+                  <figcaption>Kanban board snapshot</figcaption>
+                </figure>
+              </div>
+            </details>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
+    <!-- LEARNING -->
     <section id="learning" class="section section-muted">
       <div class="container">
-        <div class="section-head">
-          <h2>Learning Portfolio</h2>
-          <p>Goals, progression, and self-evaluation based on work during the course.</p>
-        </div>
+        <h2>Learning Portfolio</h2>
 
         <div class="grid-2">
-          <article class="card">
-            <h3>Learning goals</h3>
-            <ul class="bullets">
-              <li>Strengthen gameplay systems programming with interconnected features</li>
-              <li>Improve UI implementation and navigation for multiple input methods</li>
-              <li>Practice coordination and delivery through consistent agile routines</li>
-              <li>Develop stronger testing and balancing habits</li>
+          <div class="card">
+            <h3>Learning Goals</h3>
+            <ul>
+              <li>Improve gameplay systems programming</li>
+              <li>Develop robust UI systems for multiple input methods</li>
+              <li>Strengthen team coordination and delivery</li>
+              <li>Improve testing and balancing practices</li>
             </ul>
-          </article>
-
-          <article class="card">
-            <h3>What I learned</h3>
-            <ul class="bullets">
-              <li>How to translate design discussions into implementable systems and tasks</li>
-              <li>How to reduce integration risk by coordinating dependencies early</li>
-              <li>How iterative testing impacts balancing and UX</li>
-              <li>How documentation supports clearer communication under time constraints</li>
-            </ul>
-          </article>
-        </div>
-
-        <article class="card card-wide">
-          <h3>Tools and AI usage</h3>
-          <p class="muted">
-            Document here how you used tools (engine, version control, communication, AI tools).
-            Keep this factual: what was used, for what, and how you validated results through testing.
-          </p>
-
-          <div class="grid-2">
-            <div class="mini-card">
-              <h4>Tools</h4>
-              <ul class="bullets">
-                <li>GitHub (repo + Kanban)</li>
-                <li>Discord (logs and coordination)</li>
-                <li>Game engine / IDE (implementation)</li>
-              </ul>
-            </div>
-            <div class="mini-card">
-              <h4>AI</h4>
-              <ul class="bullets">
-                <li>Support for clarifying implementation approaches</li>
-                <li>Support for documentation clarity</li>
-                <li>All outputs validated through manual testing and iteration</li>
-              </ul>
-            </div>
           </div>
-        </article>
-      </div>
-    </section>
 
-    <section id="workflow" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Workflow Evidence</h2>
-          <p>Employers and assessors value process artifacts. Add “work-in-progress” evidence here.</p>
+          <div class="card">
+            <h3>Learning Outcomes</h3>
+            <ul>
+              <li>Better translation of design ideas into implementable systems</li>
+              <li>Improved integration planning and dependency management</li>
+              <li>Stronger understanding of UX impact through testing</li>
+              <li>Clearer documentation and communication</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Documents</h3>
-            <ul class="bullets">
-              <li>Gameplay design document</li>
-              <li>Swamp level implementation document</li>
-              <li>Audio design document</li>
-            </ul>
-            <p class="muted small">Add links, screenshots, or PDFs.</p>
-          </article>
-
-          <article class="card">
-            <h3>Boards & Logs</h3>
-            <ul class="bullets">
-              <li>Kanban snapshots (early/mid/late)</li>
-              <li>Meeting notes summary</li>
-              <li>Decision log highlights</li>
-            </ul>
-            <p class="muted small">Show progression over time.</p>
-          </article>
-
-          <article class="card">
-            <h3>Testing & Feedback</h3>
-            <ul class="bullets">
-              <li>Playtest survey (questions + results summary)</li>
-              <li>Bug list examples</li>
-              <li>Balancing notes</li>
-            </ul>
-            <p class="muted small">Tie changes to evidence.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="reflection" class="section section-muted">
-      <div class="container">
-        <div class="section-head">
-          <h2>Reflection & Next Steps</h2>
-          <p>Direct answers to evaluation prompts: outcomes, gaps, and future development.</p>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <h3>What went well</h3>
-            <ul class="bullets">
-              <li>Consistent coordination and delivery rhythm</li>
-              <li>Strong systems ownership (inputs, UI, inventory/equipment/resources)</li>
-              <li>High collaboration and integration support across roles</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>What I would improve next</h3>
-            <ul class="bullets">
-              <li>Earlier formalization of system interfaces to reduce merge friction</li>
-              <li>More automated/structured testing practices</li>
-              <li>More time allocated to UX polish and accessibility checks</li>
-            </ul>
-          </article>
-        </div>
-
-        <article class="card card-wide">
-          <h3>Future direction</h3>
-          <p class="muted">
-            Write 5–8 lines about what roles you want next (e.g., gameplay programmer, UI/UX engineer),
-            what skills you need (e.g., performance profiling, architecture patterns), and what concrete steps you will take.
+        <div class="card card-wide">
+          <h3>Reflection</h3>
+          <p>
+            Throughout the course, I maintained an active role in both technical delivery and team coordination.
+            I strengthened my systems programming skills while gaining practical experience in supporting a multidisciplinary team.
           </p>
-        </article>
+
+          <div class="placeholder">
+            <strong>Supporting material:</strong>
+            <ul>
+              <li>
+                <details class="mini-details">
+                  <summary>Self-assessment notes</summary>
+                  <ul class="note-list">
+                    <li><b>Technical contribution & ownership</b> <br>
+                      I took clear ownership of core gameplay-supporting systems (input, UI, inventory, equipment, resources) and ensured they were functional, integrated, and testable 
+                      within the project timeline. I was able to deliver working systems consistently and support others in integrating their features with mine.</li>
+
+                    <li><b>Workflow and implementation quality</b> <br>
+                    My workflow improved during the course: I moved from implementing features in isolation to actively considering system boundaries and integration points earlier, which 
+                    reduced later merge issues and rework.
+                    </li>
+
+                    <li><b>Communication and team interaction</b> <br>
+                    I actively communicated progress, blockers, and technical constraints during weekly meetings and informal discussions. This helped align expectations between design, UI, 
+                    and implementation, especially when requirements evolved during development.
+                  </li>
+
+                  <li>
+                    <b>Problem-solving and adaptability</b> <br>
+                    When encountering technical issues or integration conflicts, I focused on identifying root causes and proposing practical solutions rather than workarounds. I was able to
+                    adapt my approach based on feedback from testing and peer input.
+                  </li>
+
+                  <li>
+                    <b>My biggest regret</b> <br>
+                    Due to the workload, overlapping responsibilities, and time constraints, I relied on AI tools more than I would ideally prefer in order to complete all assignments and
+                    fulfill my roles. While this supported delivery, it reduced opportunities for deeper independent exploration in some areas. In future personal and custom projects, I 
+                    intend to minimize AI usage and rely more on manual problem-solving to maximize learning
+                  </li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
+                <details class="mini-details">
+                  <summary>Feedback from peers</summary>
+                  <ul class="note-list">
+                    <li>
+                    </li>
+                    <li>[Add feedback excerpt]</li>
+                    <li>[Add feedback excerpt]</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section id="summary" class="section">
+      <div class="container">
+        <h2>Quick Summary</h2>
+
+        <ul class="summary-list">
+          <li>Roles: Implementation Lead, Scrum Master, Systems &amp; UI Programmer</li>
+          <li>Primary contribution: gameplay systems, UI, and team process</li>
+          <li>Strong focus on implementation, integration, and testing</li>
+          <li>Active support of team members across disciplines</li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <strong>TC Course Portfolio</strong>
-        <div class="muted small">Learning & Group Contribution</div>
-      </div>
-      <div class="footer-right">
-        <a href="#main">Back to top</a>
-      </div>
+    <div class="container">
+      <span>TC Course Portfolio — Learning &amp; Group Contribution</span>
     </div>
   </footer>
 </body>
